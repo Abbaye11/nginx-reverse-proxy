@@ -18,4 +18,4 @@ jobs:
           cd /Users/seb/Docker/abbaye11.ch
           /usr/bin/git clone https://sebChevre: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@github.com/Abbaye11/nginx-reverse-proxy.git
           cd nginx-reverse-proxy
-          docker compose -d up
+          docker compose up -d
