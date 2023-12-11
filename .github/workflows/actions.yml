@@ -20,4 +20,4 @@ jobs:
         command_timeout: 30m
         script: |
           echo "ok"
-          ls
+          /bin/ls
