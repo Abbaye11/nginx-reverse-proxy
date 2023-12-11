@@ -1,5 +1,5 @@
 name: ssh-remote-test
-run-name: ${{ github.actor }} is learning sGjitHub Actions
+run-name: Deploy nginx-reverse-proxy with docker compose
 on: [push]
 jobs:
   run_example_job:
@@ -15,4 +15,4 @@ jobs:
         port: ${{ secrets.PORT }}
         command_timeout: 30m
         script: | 
-          docker compose up
+          ps
