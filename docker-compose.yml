@@ -12,7 +12,9 @@ services:
       - /Users/seb/DockerMount/certbot:/etc/letsencrypt/:rw
     command: certonly --webroot -w /var/www/certbot --force-renewal --email seb.chevre@gmail.com -d *.abbaye11.ch --agree-tos
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-  
+    networks: 
+      - certbot
+
   reverse_proxy:
     image: nginx:1.25.3-alpine-slim
     volumes:
@@ -25,3 +27,14 @@ services:
       - "80:80"
       - "443:443"
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    networks: 
+      - certbot
+      - abbaye11
+
+networks:
+  abbaye11:
+    name: abbaye11
+    driver: custom-driver-1
+  certbot:
+    name: certbot
+    driver: custom-driver-1
