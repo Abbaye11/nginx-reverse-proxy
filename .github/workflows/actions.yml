@@ -2,7 +2,7 @@ name: ssh-remote-test
 run-name: Deploy nginx-reverse-proxy with docker compose
 on: [push]
 jobs:
-  run_example_job:
+  git_pull_docker_compose:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
