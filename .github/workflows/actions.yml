@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        path: master
     - name: print out example job
       uses: appleboy/ssh-action@v0.1.10
       with:
@@ -14,4 +18,5 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         command_timeout: 30m
-        script: ls
+        script: |
+          docker compose up
