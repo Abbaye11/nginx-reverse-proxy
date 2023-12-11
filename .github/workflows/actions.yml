@@ -14,5 +14,4 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         command_timeout: 30m
-        script: | 
-          ls
+        script: ls
