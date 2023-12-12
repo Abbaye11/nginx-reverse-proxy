@@ -17,4 +17,4 @@ jobs:
         script: |
           cd /Users/seb/Docker/abbaye11.ch/nginx-reverse-proxy
           /usr/bin/git pull origin master
-          docker compose up -d
+          /usr/local/bin/docker compose up -d
