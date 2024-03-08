@@ -15,6 +15,6 @@ jobs:
         port: ${{ secrets.PORT }}
         command_timeout: 30m
         script: |
-          cd /Users/seb/Docker/abbaye11.ch/nginx-reverse-proxy
-          /usr/bin/git pull origin master
-          /usr/local/bin/docker compose up -d
+          cd /home/ubuntu/nginx-reverse-proxy
+          git pull origin master
+          sudo docker compose up -d
