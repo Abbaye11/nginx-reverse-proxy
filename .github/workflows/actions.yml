@@ -9,7 +9,7 @@ jobs:
     - name: Git pull and docker-compose deploy
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: abbaye11.internet-box.ch
+        host: 128.65.199.31
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
