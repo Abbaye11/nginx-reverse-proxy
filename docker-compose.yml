@@ -34,7 +34,6 @@ services:
 networks:
   abbaye11:
     name: abbaye11
-    external: true
 
   certbot:
     name: certbot
