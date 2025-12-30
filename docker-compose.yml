@@ -12,7 +12,7 @@ services:
       resources:
           limits:
             cpus: "0.1"
-            memory: "0.25gb"
+            memory: "0.25"
           reservations:
             cpus: "0.1"
             memory: "100m"
@@ -31,9 +31,9 @@ services:
       resources:
           limits:
             cpus: "0.1"
-            memory: "0.5gb"
+            memory: "0.5"
           reservations:
-            cpus: "0.25gb"
+            cpus: "0.25"
             memory: "200m"
     volumes:
       - ./site-content:/usr/share/nginx/html
